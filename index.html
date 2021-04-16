@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Survey Form</title>
+
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+     <style>
+
+      h1 {
+         text-align: center;
+         color:white;
+      }
+       P {
+         text-align: center;
+         font-size: 20px;
+         color:white;
+       }
+
+       label {
+           font-size: 20px;
+       }
+        
+        .input {
+            font-size: 16px;
+        }
+
+         body {
+             background-color: steelblue;
+         }
+
+         form {
+             background-color: white;
+             padding:35px;
+         }
+          
+     
+     </style>
+
+     <div class = "container">
+         <div class = "row">
+    <br>
+    <h1 id = "title">freeCodeCamp Survey Form</h1>
+     <p id = "description"><em>Thank you for taking the time to help us improve the platform</em></p>
+     <br><br>
+      <div class = "col-lg-8 col-sm-8 col-lg-offset-2 col-sm-offset-2">
+     <form id="survey-form">
+       <label for="name" id="name-label">Name</label>    
+       <input class = "form-control input" type="text" id="name" required placeholder="Enter your name">
+       <br>
+       <label for="email" id="email-label">Email</label>    
+       <input class = "form-control input" type="email" id="email" required placeholder="Enter your Email">
+       <br>
+       <label for="number" id="number-label">Age (optional)</label>    
+       <input class = "form-control input" type="number" id="number" min="10" max="99" step="1" required placeholder="Age">
+       <br>
+       <label for="dropdown" id="dropdown-label">Which option best describes your current role?</label>    
+       <select class="form-control input" name = "dropdown" id="dropdown">  
+         <option selected disabled>Select current role</option>      
+         <option value= "student">Student</option>
+         <option value="fulltimejob">Full Time Job</option>
+         <option value= "fulltimelearner">Full Time Learner</option>
+         <option value="prefernottosay">Prefer not to say</option>
+         <option value= "other">Other</option>
+       </select>
+       <br>
+        <label for="radio">Would you recommend freeCodeCamp to a friend?</label> 
+        <div class="radio">
+        <label>
+           <input type="radio" name="radiogroup" value="1"> Definitely     
+        </label>
+        </div>
+        <div class="radio">
+        <label>
+            <input type="radio" name="radiogroup" value="2"> Maybe     
+         </label>
+        </div>
+        <div class = "radio">
+         <label>
+            <input type="radio" name="radiogroup" value="3"> Not sure     
+         </label>
+        </div>
+        <br>
+        <label for="dropdown" id="dropdown-label">What is your favorite feature of freeCodeCamp?</label>    
+       <select class="form-control input" name = "dropdown" id="dropdown">  
+         <option selected disabled>Select an option</option>      
+         <option value= "challenges">Challenges</option>
+         <option value="projects">Projects</option>
+         <option value= "community">Community</option>
+         <option value="opensource">Open Source</option>
+       </select>
+        <br>
+        <label for="checkbox">What would you like to see improved? <small>(Check all that apply)</small></label> 
+        <div class="checkbox">
+        <label>
+           <input type="checkbox" value="1"> Front-end Projects     
+        </label>
+        </div>
+        <div class="checkbox">
+        <label>
+            <input type="checkbox" value="2"> Back-end Projects  
+         </label>
+        </div>
+        <div class = "checkbox">
+         <label>
+            <input type="checkbox" value="3"> Data Visualization     
+         </label>
+        </div>
+         <div class="checkbox">
+        <label>
+           <input type="checkbox" value="4"> Challenges     
+        </label>
+        </div>
+        <div class="checkbox">
+        <label>
+            <input type="checkbox" value="5"> Open Source Community
+         </label>
+        </div>
+        <div class = "checkbox">
+         <label>
+            <input type="checkbox" value="6"> Gitter help rooms     
+         </label>
+        </div>
+        <div class="checkbox">
+        <label>
+           <input type="checkbox" value="7"> Videos
+        </label>
+        </div>
+        <div class="checkbox">
+        <label>
+            <input type="checkbox" value="8"> City Meetups    
+         </label>
+        </div>
+        <div class = "checkbox">
+         <label>
+            <input type="checkbox" value="9"> Wiki 
+         </label>
+        </div>
+         <div class="checkbox">
+        <label>
+           <input type="checkbox" value="10"> Forum  
+        </label>
+        </div>
+        <div class="checkbox">
+        <label>
+            <input type="checkbox" value="11"> Additional Courses
+         </label>
+        </div>
+        <br>
+        <label for= "textarea">Any comments or suggestions?</label>
+        <textarea class="form-control input" id="textarea" name="textarea" rows="4" cols="50">Enter your comment here...
+        </textarea> 
+        <br>
+        <button class="form-control input" style = "background-color: rgb(45, 221, 45);" id="submit" type="submit"><strong>Submit</strong></button>
+        <br>
+
+     </form>
+      </div>
+      </div>
+     </div>
+     
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </body>
+</html>
